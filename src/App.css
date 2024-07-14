@@ -40,3 +40,327 @@
 .read-the-docs {
   color: #888;
 }
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* - - - Background - - - */
+body {
+  /* background-color: #ff85c2ee; */
+  width: 100%;
+  height: 100%;
+  --s: 300px; /* control the size */
+  --c1: #c73659;
+  --c2: #151515;
+
+  --_g: var(--c2) 6% 14%, var(--c1) 16% 24%, var(--c2) 26% 34%,
+    var(--c1) 36% 44%, var(--c2) 46% 54%, var(--c1) 56% 64%, var(--c2) 66% 74%,
+    var(--c1) 76% 84%, var(--c2) 86% 94%;
+  background: radial-gradient(
+      100% 100% at 100% 0,
+      var(--c1) 4%,
+      var(--_g),
+      #0008 96%,
+      #0000
+    ),
+    radial-gradient(
+        100% 100% at 0 100%,
+        #0000,
+        #0008 4%,
+        var(--_g),
+        var(--c1) 96%
+      )
+      var(--c1);
+  background-size: var(--s) var(--s);
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: move 20s linear infinite;
+  margin-top: 4em;
+}
+
+@keyframes move {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 450px 450px;
+  }
+}
+
+/* - - - Main body - - - */
+
+.app {
+  /* border: solid black; */
+  background-color: #151515;
+  height: auto;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  margin: 1em;
+  text-align: center;
+  border-radius: 15px;
+  font-family: "Lucida Console";
+  color: #eeeeee;
+  letter-spacing: 3px;
+  box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.463);
+}
+
+.mainTitle {
+  padding: 0.2em;
+  margin: 0.2em;
+}
+
+.createTodo {
+  border: solid #a91d3a;
+  background-color: #a91d3a;
+  padding: 1em;
+  margin: 1em;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.463);
+}
+
+.activeList {
+  border: solid #a91d3a;
+  background-color: #a91d3a;
+  border-radius: 15px;
+  padding: 1em;
+  margin: 1em;
+  box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.463);
+}
+
+.compTaskContainer {
+  border: solid #c73659;
+  background-color: #c73659;
+  border-radius: 15px;
+  padding: 1em;
+  margin: 1em;
+  box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.463);
+}
+
+.compTask {
+  --input-focus: #2d8cf0;
+  --input-out-of-focus: #eeeeee;
+  --bg-color: #fff;
+  --bg-color-alt: #666;
+  --main-color: #323232;
+  position: relative;
+  cursor: pointer;
+}
+
+.compTask input {
+  position: absolute;
+  opacity: 0;
+}
+
+.todoContent {
+  padding: 0.4em;
+  margin: 0.4em;
+}
+
+.todoTitle {
+  padding: 0.1em;
+  margin: 0.1em;
+}
+
+.todoTask {
+  padding: 0.1em;
+  margin: 0.1em;
+}
+
+/* - - - Search Box - - - */
+
+.search {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchTerm {
+  border: 3px solid #eeeeee;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px;
+  margin: 0.2em;
+  outline: none;
+}
+
+/* - - - Checkbox - - - */
+
+.checkMark{
+  width: 30px;
+  height: 30px;
+  position: relative;
+  top: 0;
+  left: 0;
+  border: 2px solid var(--main-color);
+  border-radius: 5px;
+  box-shadow: 4px 4px var(--main-color);
+  background-color: var(--input-out-of-focus);
+  transition: all 0.3s;
+}
+
+.compTask input:checked ~ .checkMark {
+  background-color: var(--input-focus);
+}
+
+.checkMark:after {
+  content: "";
+  width: 7px;
+  height: 15px;
+  position: absolute;
+  top: 2px;
+  left: 8px;
+  display: none;
+  border: solid var(--bg-color);
+  border-width: 0 2.5px 2.5px 0;
+  transform: rotate(45deg);
+}
+
+.compTask input:checked ~ .checkMark:after {
+  display: block;
+}
+
+/* - - - Button Layout - - - */
+
+.btn {
+  /* Variables */
+  --button_radius: 0.75em;
+  --button_color: #e8e8e8;
+  --button_outline_color: #000000;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: var(--button_radius);
+  background: var(--button_outline_color);
+  margin: 0.2em;
+}
+
+.mainBtn{
+    /* Variables */
+    --button_radius: 0.75em;
+    --button_color: #e8e8e8;
+    --button_outline_color: #000000;
+    font-size: 17px;
+    font-weight: bold;
+    border: none;
+    border-radius: var(--button_radius);
+    background: var(--button_outline_color);
+}
+
+.addBtn {
+  display: block;
+  box-sizing: border-box;
+  border: 2px solid var(--button_outline_color);
+  border-radius: var(--button_radius);
+  padding: 0.4em 0.8em;
+  background: var(--button_color);
+  color: var(--button_outline_color);
+  transform: translateY(-0.2em);
+  transition: transform 0.1s ease;
+}
+
+button:hover .addBtn {
+  /* Pull the button upwards when hovered */
+  transform: translateY(-0.33em);
+}
+
+button:active .addBtn {
+  /* Push the button downwards when pressed */
+  transform: translateY(0);
+}
+
+.saveBtn{
+  display: block;
+  box-sizing: border-box;
+  border: 2px solid var(--button_outline_color);
+  border-radius: var(--button_radius);
+  padding: 0.2em 0.4em;
+  background: var(--button_color);
+  color: var(--button_outline_color);
+  transform: translateY(-0.2em);
+  transition: transform 0.1s ease;
+}
+
+button:hover .saveBtn {
+  /* Pull the button upwards when hovered */
+  transform: translateY(-0.33em);
+}
+
+button:active .saveBtn {
+  /* Push the button downwards when pressed */
+  transform: translateY(0);
+}
+
+.editBtn {
+  display: block;
+  box-sizing: border-box;
+  border: 2px solid var(--button_outline_color);
+  border-radius: var(--button_radius);
+  padding: 0.2em 0.4em;
+  background: var(--button_color);
+  color: var(--button_outline_color);
+  transform: translateY(-0.2em);
+  transition: transform 0.1s ease;
+}
+
+button:hover .editBtn {
+  /* Pull the button upwards when hovered */
+  transform: translateY(-0.33em);
+}
+
+button:active .editBtn {
+  /* Push the button downwards when pressed */
+  transform: translateY(0);
+}
+
+.deleteBtn {
+  display: block;
+  box-sizing: border-box;
+  border: 2px solid var(--button_outline_color);
+  border-radius: var(--button_radius);
+  padding: 0.2em 0.4em;
+  background: var(--button_color);
+  color: var(--button_outline_color);
+  transform: translateY(-0.2em);
+  transition: transform 0.1s ease;
+}
+
+button:hover .deleteBtn {
+  /* Pull the button upwards when hovered */
+  transform: translateY(-0.33em);
+}
+
+button:active .deleteBtn {
+  /* Push the button downwards when pressed */
+  transform: translateY(0);
+}
+
+.disDeleteBtn{
+  /* Variables */
+  --button_radius: 0.75em;
+  --button_color: #e8e8e8ce;
+  --button_outline_color: #0000005d;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: var(--button_radius);
+  background: var(--button_outline_color);
+  margin: 0.2em;
+}
+
+.addDeleteBtn{
+  display: block;
+  box-sizing: border-box;
+  border: 2px solid var(--button_outline_color);
+  border-radius: var(--button_radius);
+  padding: 0.2em 0.4em;
+  background: var(--button_color);
+  color: var(--button_outline_color);
+  transform: translateY(-0.2em);
+  transition: transform 0.1s ease;
+}
