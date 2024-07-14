@@ -21,6 +21,9 @@ This project is an gamer-themed website featuring a responsive design. It includ
 - [Notes](#notes)
 - [Acknowledgements](#acknowledgements)
 
+## Webpage Image
+![Todo List](https://github.com/user-attachments/assets/6868088b-9222-421a-acbc-918bff9f0d95)
+
 
 ## Features
 
