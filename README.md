@@ -1,8 +1,31 @@
-# React + Vite
+# Todo List Web App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple Todo List web application built using React and Vite. You can add tasks and delete them as needed.
 
-Currently, two official plugins are available:
+## Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+You can view the live demo [here](https://your-netlify-app-url).
+
+## Features
+
+- Add new tasks to the list.
+- Delete tasks from the list.
+
+## Technologies Used
+
+- React
+- Vite
+
+## Getting Started
+
+To get a local copy up and running follow these simple steps.
+
+### Prerequisites
+
+Make sure you have Node.js and npm (or yarn) installed on your development machine.
+
+### Installation
+
+1. Clone the repo
+   ```sh
+   git clone https://github.com/your-username/your-repo.git
