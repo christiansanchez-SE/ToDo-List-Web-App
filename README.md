@@ -6,6 +6,22 @@ This is a simple Todo List web application built using React and Vite. You can a
 
 You can view the live demo [here](https://cs-todolist-se.netlify.app/).
 
+## Overview
+This project is an gamer-themed website featuring a responsive design. It includes one main page where you could add and delete tasks of your liking. The layout adapts to different screen sizes, making it user-friendly on desktops, tablets, and phones.
+
+## Table of Contents
+- [Overview](#overview)
+- [Table of Contents](#table-of-contents)
+- [Webpage Image](#webpage-image)
+- [Technologies Used](#technologies-used)
+- [Getting Started](#getting-started)
+- [Prerequisites](#prerequisites)
+- [Acknowledgements](#acknowledgements)
+- [Installation](#installation)
+- [Notes](#notes)
+- [Acknowledgements](#acknowledgements)
+
+
 ## Features
 
 - Add new tasks to the list.
@@ -29,3 +45,16 @@ Make sure you have Node.js and npm (or yarn) installed on your development machi
 1. Clone the repo
    ```sh
    git clone https://github.com/your-username/your-repo.git
+
+## Notes
+
+- The code includes comments explaining the structure and purpose of different sections.
+- CSS is organized to reflect a clean and maintainable style.
+- If you have suggestions or improvements, feel free to contribute.
+
+## Acknowledgements
+- HTML5
+- CSS3
+- JavaScript
+- Vite & React
+- netlify (for deployment) 
